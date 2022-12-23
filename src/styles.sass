@@ -1,0 +1,241 @@
+// Color Variables
+$color0: #14142B // fonts, etc
+$color1: #FFFFFF
+$color2: #4E4B66 // "Grayscale/Body" color
+$color3: #A0A3BD // "Grayscale/Placeholder" color
+$color4: #FCFCFC // background color 1
+$color5: #F7F7FC // background color 2
+$color6: #EFF0F6 // input background color
+$color7: #5F2EEA
+$color8: #BCA4FF
+$color9: #00BA88
+$color10: gradient(114.44deg, #7433FF 0%, #FFA3FD 100%) // gradient
+$color11: #00BA88 // gradient
+$color12: #2A00A2 // Primary / Dark
+$color13: #E4DAFF // Primary / Light
+$color14: #BCA4FF // Primary / Darkmode
+
+// Font-size and Line-height Variables
+$fs1: 48px // desktop display medium
+$lh1: 1.4
+$fs2: 32px // desktop display small
+$lh2: 1.4
+$fs3: 18px // desktop text medium
+$lh3: 1.85
+$fs4: 16px // desktop text small
+$lh4: 1.75
+$fs5: 14px // desktop text x-small
+$lh5: 1.45
+
+// Main Styles
+*
+  font-family: poppins, sans-serif
+  letter-spacing: 0.75px
+a
+    text-decoration: none
+h1, h2, h3, h4, p, ul
+    margin: 0
+    padding: 0
+    list-style: none
+button
+    padding: 0
+    border: none
+    font: inherit
+    color: inherit
+    background-color: transparent
+    cursor: pointer
+.container
+    width: 1200px
+    margin: 0 auto
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 30px
+    padding-bottom: 30px
+    &__logo-link
+        line-height: 0
+.header-main
+    display: flex
+    align-items: center
+.header-menu
+    &__list
+        display: flex
+    &__li 
+        margin-right: 48px
+        line-height: 0
+    &__link
+        color: $color0
+        font-size: $fs4
+        text-decoration: none
+        transition: 0.5s
+        &:hover
+            color: $color7
+            transition: 0.5s
+.header-logo
+  margin-right: 140px
+.header-aside
+  &__signup
+    margin-right: 18px
+.btn-sml-primary
+  background-color: $color7
+  color: $color1
+  padding: 12px 30px
+  border-radius: 40px
+  font-weight: 600
+  font-size: $fs5
+  transition: 0.5s
+  &:hover
+    background-color: $color12
+    transition: all 0.5s ease-out
+  &:focus
+    border: 8px solid color13
+  &_reg // modifier
+    background: linear-gradient(114.44deg, #7433FF 0%, #FFA3FD 100%)
+    padding: 12px 45px
+  &_reg:hover
+    background: linear-gradient(164.44deg, #7433FF 0%, #FFA3FD 100%)
+.btn-sml-secondary
+  border: 2px solid $color7
+  color: $color7
+  padding: 8px 30px
+  border-radius: 40px
+  font-weight: 600
+  font-size: $fs5
+  transition: 0.5s
+  &:hover
+    color: $color12
+    border-color: $color12
+    transition: all 0.5s ease-out
+// title-block
+.main-block
+  display: flex
+  position: relative
+  flex-direction: column
+  padding-top: 185px
+  padding-bottom: 185px
+  &__title
+    width: 765px
+    padding-bottom: 15px
+    font-size: $fs1
+    line-height: $lh1
+    color: $color2
+    font-weight: normal
+  &__description
+    width: 560px
+    padding-bottom: 30px
+    font-size: $fs3
+    line-height: $lh3
+    color: $color2
+    font-weight: normal
+  &__register
+    display: inline-block
+  &__animation
+    position: absolute
+    z-index: -100
+    width: 550px
+    top: 100px
+    right: -35px
+// features
+.features
+  position: relative
+  padding-top: 128px
+  padding-bottom: 160px
+  background-color: $color5
+  overflow: hidden
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    bottom: -535px
+    height: 600px
+    width: 100%
+    background-color: $color1
+    border-radius: 30% 56% 99% 0% / 5% 9% 88% 77%
+.features-content
+  &__title
+    padding-bottom: 48px
+    color: $color2
+    font-size: $fs2
+  &__items
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    flex-direction: row
+    justify-content: space-between
+  &__item
+    box-sizing: border-box
+    width: 260px
+    padding: 40px 45px
+    margin-bottom: 25px
+    background-color: $color1
+    filter: drop-shadow(0px 8px 16px rgba(17, 17, 17, 0.04))
+    border-radius: 16px
+    text-align: center
+    font-size: $fs4
+    line-height: $lh4
+
+// cta block
+.cta
+  position: relative
+  background-color: $color14
+  overflow: hidden
+  &:before
+    content: ""
+    display: block
+    position: absolute
+    top: -25px
+    height: 50px
+    width: 100%
+    background-color: $color1
+    border-radius: 50% 50% 50% 50% / 50% 50%
+.cta-content
+  display: flex
+  flex-direction: column
+  padding-top: 120px
+  padding-bottom: 96px
+  &__title
+    padding-bottom: 32px
+    text-align: center
+    font-size: $fs2
+    line-height: $lh2
+  &__btn-wrapper
+    margin: 0 auto
+.btn-sml-primary_black
+    background-color: $color0
+// footer
+.footer
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-top: 30px
+  padding-bottom: 30px
+  &__logo-link
+    line-height: 0
+.footer-main
+  display: flex
+  align-items: center
+.footer-menu
+  &__list
+    display: flex
+  &__li 
+    margin-right: 48px
+    line-height: 0
+  &__link
+    color: $color0
+    font-size: $fs4
+    text-decoration: none
+    transition: 0.5s
+    &:hover
+      color: $color7
+      transition: 0.5s
+.footer-logo
+  margin-right: 140px
+.footer-aside
+  &__link
+    color: $color0
+    font-weight: 600
+    transition: 0.5s
+    &:hover
+      color: $color7
+      transition: 0.5s
