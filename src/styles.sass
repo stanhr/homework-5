@@ -44,9 +44,12 @@ button
     color: inherit
     background-color: transparent
     cursor: pointer
+
 .container
     width: 1200px
-    margin: 0 auto
+    margin: auto
+
+
 .header
     display: flex
     justify-content: space-between
@@ -241,14 +244,21 @@ button
       transition: 0.5s
 
 // about 
+.container.container_about
+  display: flex
+
+@media (min-width: 768px) and (max-width: 1199px)
+  .container.container_about
+      z-index: auto
+      background-color: pink
+    
+
 .about
-  position: relative
   display: flex
   flex-direction: column
-  width: 547px
-  height: 500px
   padding-top: 28px
   padding-bottom: 80px
+
   &__title
     padding-bottom: 48px
     padding-top: 60px
@@ -259,8 +269,7 @@ button
     width: 100px
     height: 34px
   &__description
-    width: 547px
-    height: 204px
+    width: 600px
     font-weight: 400
     font-size: 18px
     line-height: 34px
@@ -270,9 +279,9 @@ button
     display: flex
     gap: 48px
     height: 48px  
-  &__animation
-    position: absolute
-    width: 504px
-    top: 14px
-    left: 697px
-    height: 485px
+
+.container__animation
+  display: flex
+  width: 50%
+  flex-direction: column
+  z-index: auto
